@@ -38,7 +38,7 @@ function Navbar() {
         {/* Desktop Navigation */}
         <div className="navbar-links">
           <a href="#appointment">Book Appointment</a>
-          <a href="#notice">Notice Board</a>
+          <Link to="/NoticePage">Notice Board</Link>
           <a href="#contact">Contact</a>
         </div>
 
