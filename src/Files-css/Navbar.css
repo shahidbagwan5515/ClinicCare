@@ -1,0 +1,532 @@
+.navbar {
+  width: 100%;
+  height: 76px;
+  background: #ffffff;
+  margin-top: -10px;
+  position: fixed;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 9.5%;
+  box-sizing: border-box;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  /* position: relative; */
+  z-index: 1000;
+}
+
+/* =========================
+   Logo
+========================= */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+
+  gap: 9px;
+
+  color: #2587ee;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.logo-icon {
+  width: 35px;
+  height: 35px;
+
+  background: #2d89f5;
+
+  border-radius: 7px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   Center Links
+========================= */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+
+  gap: 34px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-links a {
+  color: #171717;
+
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #2587ee;
+}
+
+/* =========================
+   Right Actions
+========================= */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 29px;
+}
+
+.login-link {
+  color: #171717;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.login-link:hover {
+  color: #ffffff;
+
+  background-color: #198754;
+
+  padding: 10px 14px;
+
+  border-radius: 6px;
+}
+
+.get-started-btn {
+  height: 43px;
+
+  padding: 0 17px;
+
+  background: #2d87f3;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  box-shadow: 0 4px 10px rgba(45, 135, 243, 0.2);
+
+  transition: background 0.2s ease;
+}
+
+.get-started-btn:hover {
+  background: #1976df;
+}
+
+/* =========================
+   Mobile Menu Button
+========================= */
+
+.menu-toggle {
+  display: none;
+}
+
+/* =========================
+   Sidebar Overlay
+========================= */
+
+.sidebar-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.3s ease;
+
+  z-index: 1100;
+}
+
+.sidebar-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =========================
+   Sidebar
+========================= */
+
+.mobile-sidebar {
+  position: fixed;
+
+  top: 0;
+  right: 0;
+
+  width: 430px;
+  max-width: 100%;
+
+  height: 100vh;
+
+  background: #f8fafc;
+
+  box-sizing: border-box;
+
+  padding: 20px 23px;
+
+  transform: translateX(100%);
+
+  transition: transform 0.3s ease;
+
+  z-index: 1200;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.mobile-sidebar.open {
+  transform: translateX(0);
+}
+
+/* =========================
+   Sidebar Header
+========================= */
+
+.sidebar-header {
+  width: 100%;
+
+  min-height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 19px;
+
+  border-bottom: 1px solid #dce3e9;
+
+  box-sizing: border-box;
+}
+
+/* =========================
+   Sidebar Logo
+========================= */
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: #2587ee;
+
+  font-size: 27px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.sidebar-logo-icon {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 8px;
+
+  background: #2d89f5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   Close Button
+========================= */
+
+.sidebar-close {
+  width: 35px;
+  height: 39px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.sidebar-close:hover {
+  background: #198754;
+  color: white;
+}
+
+/* =========================
+   Sidebar Links
+========================= */
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+
+  padding: 24px 0 21px;
+
+  border-bottom: 1px solid #dce3e9;
+}
+
+.sidebar-links a {
+  min-height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 18px;
+
+  box-sizing: border-box;
+
+  color: #18202a;
+
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  border-radius: 7px;
+
+  transition: 0.2s ease;
+}
+
+.sidebar-links a svg {
+  flex-shrink: 0;
+}
+
+.sidebar-links a:hover {
+  background: #eef6ff;
+
+  color: #2587ee;
+}
+
+/* =========================
+   Bottom Actions
+========================= */
+
+.sidebar-actions {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  padding: 27px 20px 0;
+}
+
+/* =========================
+   Login
+========================= */
+
+.sidebar-login {
+  min-height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 20px;
+
+  box-sizing: border-box;
+
+  color: #111827;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+
+  border: 1px solid gray;
+
+  border-radius: 7px;
+}
+
+.sidebar-login:hover {
+  color: #ffffff;
+
+  background: #198754;
+
+  border-color: #198754;
+}
+
+/* =========================
+   Get Started
+========================= */
+
+.sidebar-get-started {
+  width: 100%;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding-left: 19px;
+
+  box-sizing: border-box;
+
+  border-radius: 7px;
+
+  background: #2d87f3;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  box-shadow: 0 5px 15px rgba(45, 135, 243, 0.15);
+
+  transition: 0.2s ease;
+}
+
+.sidebar-get-started:hover {
+  background: #1976df;
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 30px;
+    margin-top: -10px;
+    position: fixed;
+  }
+
+  .navbar-links {
+    gap: 18px;
+  }
+
+  .navbar-links a {
+    font-size: 14px;
+  }
+
+  .navbar-actions {
+    gap: 15px;
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 700px) {
+  .navbar {
+    height: 70px;
+
+    min-height: 70px;
+
+    padding: 0 20px;
+
+    flex-wrap: nowrap;
+  }
+
+  /* Desktop links hide */
+  .navbar-links,
+  .navbar-actions {
+    display: none;
+  }
+
+  /* Menu button show only mobile */
+  .menu-toggle {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    margin-left: auto;
+
+    border: none;
+
+    background: transparent;
+
+    color: #1976df;
+
+    cursor: pointer;
+  }
+
+  .mobile-sidebar {
+    width: 100%;
+  }
+}
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 15px;
+
+  }
+
+  .navbar-logo {
+    font-size: 19px;
+  }
+
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .mobile-sidebar {
+    width: 100%;
+
+    padding: 10px 13px;
+  }
+
+  .sidebar-logo {
+    font-size: 19px;
+  }
+
+  .sidebar-links a {
+    font-size: 15px;
+  }
+}
