@@ -139,10 +139,10 @@ function Navbar() {
               <line x1="3" y1="10" x2="21" y2="10" />
             </svg>
 
-            <span>Book Appointment</span>
+            <Link to="/">Book Appointment</Link>
           </a>
 
-          <a href="#notice" onClick={closeMenu}>
+          <a href="#notice" onClick={closeMenu} className="NoticesMenu">
             <svg
               width="21"
               height="21"
@@ -159,7 +159,7 @@ function Navbar() {
               <line x1="9" y1="16" x2="16" y2="16" />
             </svg>
 
-            <span>Notice Board</span>
+            <Link to="/NoticePage">Notice Boards</Link>
           </a>
 
           <a href="#contact" onClick={closeMenu}>
@@ -176,7 +176,7 @@ function Navbar() {
               <path d="M4 5h16v11H8l-4 4z" />
             </svg>
 
-            <span>Contact</span>
+            <Link to="/">Contact</Link>
           </a>
         </div>
 
