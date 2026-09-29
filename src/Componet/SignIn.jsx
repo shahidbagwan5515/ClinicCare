@@ -1,5 +1,6 @@
 import "../Files-css/SignIn.css";
 
+import { Link } from "react-router-dom";
 function SignIn() {
   return (
     <div className="signin-page">
@@ -88,7 +89,7 @@ function SignIn() {
         {/* Signup */}
         <p className="signup-text">
           Don't have an account?
-          <a href="/register">Sign up here</a>
+          <Link to="/register">Sign up here</Link>
         </p>
       </div>
 
