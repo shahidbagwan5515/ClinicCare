@@ -40,7 +40,7 @@ function NoticeNavbar() {
           Home
         </Link>
 
-        <Link to="/NoticePage" onClick={closeMenu}>
+        <Link to="/signin" onClick={closeMenu}>
           Login
         </Link>
 
